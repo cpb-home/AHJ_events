@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkkhaki;
+  padding-top: 30px;
+}
+
+.score {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.board-container {
+  height: 415px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 415px;
+}
+
+.board {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.cell {
+  background-color: lightgreen;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.charImg {
+  width: 100%;
+}
