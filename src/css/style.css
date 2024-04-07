@@ -42,3 +42,20 @@ body {
 .charImg {
   width: 100%;
 }
+
+.leftChars {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.lost {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: red;
+  font-weight: bold;
+  display: none;
+}

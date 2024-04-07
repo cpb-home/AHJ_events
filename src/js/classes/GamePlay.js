@@ -6,6 +6,7 @@ export default class GamePlay {
     this.cells = [];
     this.cellClickListeners = [];
     this.timoutId;
+    this.leftChars = 0;
   }
 
 
@@ -17,6 +18,8 @@ export default class GamePlay {
       <div class="board-container">
         <div data-id="board" class="board"></div>
       </div>
+      <div class="leftChars">Пропущено: <span>0</span></div>
+      <div class="lost">Игра окончена. Вы проиграли!</div>
     `;
 
     this.boardEl = this.container.querySelector('[data-id=board]');
@@ -53,7 +56,14 @@ export default class GamePlay {
     this.timoutId = setTimeout(() => {
       clearTimeout(this.timoutId);
       this.redrawPosition(char, boardSize);
-    }, 3000);
+      const leftCharsEl = document.querySelector('.leftChars');
+      const leftCharsSpan = leftCharsEl.querySelector('span'); 
+      this.leftChars+=1;
+      leftCharsSpan.textContent = this.leftChars;
+      if (this.leftChars > 4) {
+        this.gameOver();
+      }
+    }, 1000);
   }
 
   bindToDOM(container) {
@@ -71,6 +81,12 @@ export default class GamePlay {
 
   addCellClickListener(callback) {
     this.cellClickListeners.push(callback);
+  }
+
+  gameOver() {
+    clearTimeout(this.timoutId);
+    this.cellClickListeners = [];
+    document.querySelector('.lost').style.display = 'block';
   }
 
 }

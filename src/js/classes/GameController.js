@@ -21,9 +21,10 @@ export default class GameController {
   onCellClick(index) {
     this.click = true;
     const scoreEl = document.querySelector('.score');
-    const scoreSpan = scoreEl.querySelector('span'); 
+    const scoreSpan = scoreEl.querySelector('span');
     if (Number(index) === this.char.position) {
       scoreSpan.textContent = Number(scoreSpan.textContent) + 1;
+      this.gamePlay.leftChars = 0;
     } else {
       scoreSpan.textContent = Number(scoreSpan.textContent) - 1;
     }
@@ -31,9 +32,4 @@ export default class GameController {
     this.click = true;
     this.gamePlay.redrawPosition(this.char, this.gamePlay.boardSize);
   }
-
-  placeCharacter() {
-
-  }
-
 }
