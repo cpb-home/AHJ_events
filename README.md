@@ -1,3 +1,3 @@
-#AJS Unit-tests homework. Clean functions task.
+#AHJ events
 
-[![Build status](https://ci.appveyor.com/api/projects/status/6s877kl93fmv5x20?svg=true)](https://ci.appveyor.com/project/cpb-home/ahj-dom)
+[![Build status](https://ci.appveyor.com/api/projects/status/ifvdbotkix1uo0de?svg=true)](https://ci.appveyor.com/project/cpb-home/ahj-events)
